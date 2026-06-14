@@ -1,0 +1,9 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Capital Decoded mark">
+  <rect x="6" y="6" width="108" height="108" rx="26" fill="#11182B" stroke="#E8B43A" stroke-width="4"/>
+  <path d="M40 40 L29 40 L29 80 L40 80" stroke="#8C97AD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 40 L91 40 L91 80 L80 80" stroke="#8C97AD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="44" y="64" width="9" height="16" rx="2.5" fill="#F5F7FA"/>
+  <rect x="57" y="50" width="9" height="30" rx="2.5" fill="#F5F7FA"/>
+  <rect x="70" y="34" width="9" height="46" rx="2.5" fill="#E8B43A"/>
+  <path d="M66 34 L74.5 23 L83 34 Z" fill="#E8B43A"/>
+</svg>
