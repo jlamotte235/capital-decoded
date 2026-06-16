@@ -1,0 +1,16 @@
+<svg width="420" height="96" viewBox="0 0 420 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Capital Decoded">
+  <!-- Mark -->
+  <rect x="2" y="14" width="68" height="68" rx="16" fill="#11182B" stroke="#E8B43A" stroke-width="2.5"/>
+  <!-- decode bracket -->
+  <path d="M20 32 L14 32 L14 64 L20 64" stroke="#8C97AD" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 32 L58 32 L58 64 L52 64" stroke="#8C97AD" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- ascending bars -->
+  <rect x="24" y="52" width="7" height="12" rx="2" fill="#F5F7FA"/>
+  <rect x="34" y="42" width="7" height="22" rx="2" fill="#F5F7FA"/>
+  <rect x="44" y="30" width="7" height="34" rx="2" fill="#E8B43A"/>
+  <!-- arrow tip on tallest bar -->
+  <path d="M41 30 L47.5 22 L54 30 Z" fill="#E8B43A"/>
+  <!-- Wordmark -->
+  <text x="88" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="0.5" fill="#F5F7FA">CAPITAL</text>
+  <text x="88" y="78" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="3" fill="#E8B43A">DECODED</text>
+</svg>
