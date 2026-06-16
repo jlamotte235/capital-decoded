@@ -17,9 +17,10 @@ jobs:
           node-version: '20'
       - name: Build site
         run: node build.mjs
-      - name: Render social SVGs to PNGs
+      - name: Generate and render social graphics
         run: |
           sudo apt-get update && sudo apt-get install -y librsvg2-bin
+          node tools/gen-social.mjs
           mkdir -p dist/assets/social
           shopt -s nullglob
           for f in assets/social/*.svg; do
