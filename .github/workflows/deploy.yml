@@ -17,6 +17,15 @@ jobs:
           node-version: '20'
       - name: Build site
         run: node build.mjs
+      - name: Render social SVGs to PNGs
+        run: |
+          sudo apt-get update && sudo apt-get install -y librsvg2-bin
+          mkdir -p dist/assets/social
+          shopt -s nullglob
+          for f in assets/social/*.svg; do
+            name=$(basename "$f" .svg)
+            rsvg-convert -w 1080 -h 1350 "$f" -o "dist/assets/social/$name.png"
+          done
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
