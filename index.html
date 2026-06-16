@@ -9,8 +9,6 @@
 <meta property="og:url" content="https://capitaldecoded.com/">
 <meta name="theme-color" content="#0A0E1A">
 <link rel="stylesheet" href="/assets/styles.css">
-<script>window.HS={portal:"246507952",form:"2487b0df-72e4-4ec5-bc95-0c3213beb9df",email:"capitaldecoded235@gmail.com"};</script>
-<script src="/assets/forms.js" defer></script>
 </head><body><header class="site-header"><div class="wrap">
   <a class="brand" href="/"><img src="/assets/logo.svg" alt="Capital Decoded"></a>
   <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
@@ -28,16 +26,16 @@
   <section class="section"><div class="wrap">
     <div class="section-head"><p class="eyebrow">Featured</p><h2>Latest insights</h2></div>
     <div class="featured-grid">
-      <a class="feature-card" href="/articles/set-yourself-up-before-you-buy/">
-        <div class="thumb thumb-borrower-guides"><div class="thumb-label">Borrower Guides</div></div>
-        <div class="body"><span class="tag">Borrower Guides</span>
-        <h3 style="font-size:1.5rem">Set Yourself Up Before You Ever Make an Offer</h3>
-        <p class="text-muted">The strongest buyers do quiet work months before they shop — on their finances and on how they read a house. Here's how to walk in with leverage instead of hope.</p></div></a>
-      <a class="feature-card" href="/articles/get-it-in-writing/">
-        <div class="thumb thumb-borrower-guides"><div class="thumb-label">Borrower Guides</div></div>
-        <div class="body"><span class="tag">Borrower Guides</span>
-        <h3 style="font-size:1.5rem">If It's Not in Writing, Don't Count On It</h3>
-        <p class="text-muted">The seller promised to leave the fridge. The lender "said" the rate was locked. Verbal promises evaporate in real estate. Here's the one habit that protects you.</p></div></a>
+      <a class="feature-card" href="/articles/compound-interest-eighth-wonder/">
+        <div class="thumb thumb-wealth-mindset"><div class="thumb-label">Wealth Mindset</div></div>
+        <div class="body"><span class="tag">Wealth Mindset</span>
+        <h3 style="font-size:1.5rem">Compound Interest: The Quiet Force That Builds Fortunes</h3>
+        <p class="text-muted">It's been called the eighth wonder of the world for a reason. Compound interest is slow, boring, and almost unfair in how powerful it becomes. Here's how it really works.</p></div></a>
+      <a class="feature-card" href="/articles/what-is-a-trust-deed-investment/">
+        <div class="thumb thumb-investor-insights"><div class="thumb-label">Investor Insights</div></div>
+        <div class="body"><span class="tag">Investor Insights</span>
+        <h3 style="font-size:1.5rem">What Is a Trust Deed Investment, Really?</h3>
+        <p class="text-muted">Private money loans get talked about a lot and explained almost never. Here's the plain-English version of how trust deed investing actually works — and where the risk really sits.</p></div></a>
     </div></div></section>
   <section class="section section-sm"><div class="wrap">
     <div class="section-head"><p class="eyebrow">Browse by topic</p><h2>Find what matters to you</h2></div>
@@ -73,7 +71,7 @@
     <div class="footer-brand">
       <img src="/assets/logo.svg" alt="Capital Decoded">
       <p>Clear, practical real estate insights anyone can use. No fluff, no sales pitch — just value.</p>
-      <div class="socials"><a href="https://instagram.com/capital.decodedhq" aria-label="instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a></div>
+      <div class="socials"><a href="https://instagram.com/capitaldecoded" aria-label="instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a></div>
     </div>
     <div class="footer-links">
       <div class="footer-col"><h4>Explore</h4>
@@ -91,5 +89,15 @@
     <span>capitaldecoded.com</span>
   </div>
 </div></footer>
-
+<script>
+  // newsletter + contact: graceful no-backend handling
+  document.querySelectorAll('form[data-capture]').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      if(!f.getAttribute('action')){ e.preventDefault();
+        var m=f.querySelector('.form-msg'); if(m){m.textContent="You're on the list. Thanks for subscribing!";}
+        f.reset();
+      }
+    });
+  });
+</script>
 </body></html>

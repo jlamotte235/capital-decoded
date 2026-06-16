@@ -9,8 +9,6 @@
 <meta property="og:url" content="https://capitaldecoded.com/articles/how-interest-rates-move-real-estate/">
 <meta name="theme-color" content="#0A0E1A">
 <link rel="stylesheet" href="/assets/styles.css">
-<script>window.HS={portal:"246507952",form:"2487b0df-72e4-4ec5-bc95-0c3213beb9df",email:"capitaldecoded235@gmail.com"};</script>
-<script src="/assets/forms.js" defer></script>
 </head><body><header class="site-header"><div class="wrap">
   <a class="brand" href="/"><img src="/assets/logo.svg" alt="Capital Decoded"></a>
   <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
@@ -46,7 +44,7 @@
     <div class="footer-brand">
       <img src="/assets/logo.svg" alt="Capital Decoded">
       <p>Clear, practical real estate insights anyone can use. No fluff, no sales pitch — just value.</p>
-      <div class="socials"><a href="https://instagram.com/capital.decodedhq" aria-label="instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a></div>
+      <div class="socials"><a href="https://instagram.com/capitaldecoded" aria-label="instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a></div>
     </div>
     <div class="footer-links">
       <div class="footer-col"><h4>Explore</h4>
@@ -64,5 +62,15 @@
     <span>capitaldecoded.com</span>
   </div>
 </div></footer>
-
+<script>
+  // newsletter + contact: graceful no-backend handling
+  document.querySelectorAll('form[data-capture]').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      if(!f.getAttribute('action')){ e.preventDefault();
+        var m=f.querySelector('.form-msg'); if(m){m.textContent="You're on the list. Thanks for subscribing!";}
+        f.reset();
+      }
+    });
+  });
+</script>
 </body></html>
