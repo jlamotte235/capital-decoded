@@ -72,6 +72,7 @@ const POSTS=[
 {slug:'online-estimates-vs-appraisal',tag:'Borrower Guides',lines:['An online estimate','isn’t an appraisal.','The bank trusts','the appraisal.'],gold:[1]},
 {slug:'location-still-matters',tag:'Investor Insights',lines:['You can fix a house.','You can’t fix','its location.'],gold:[1,2]},
 ];
+try{const _ex='tools/extra';for(const _f of (await fs.readdir(_ex)).filter(f=>f.endsWith('.json'))){for(const _p of JSON.parse(await fs.readFile(`${_ex}/${_f}`,'utf8')))POSTS.push(_p);}}catch(e){}
 const BG='#0A0E1A',GOLD='#E8B43A',TEXT='#F5F7FA',MUTED='#9AA7BD',LINE='#233048';
 const W=1080,H=1350,X=96,BUDGET=W-X-64;
 const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
