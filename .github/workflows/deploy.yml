@@ -19,7 +19,7 @@ jobs:
         run: node build.mjs
       - name: Generate and render social graphics
         run: |
-          sudo apt-get update && sudo apt-get install -y librsvg2-bin
+          sudo apt-get update && sudo apt-get install -y librsvg2-bin ffmpeg
           node tools/gen-social.mjs
           mkdir -p dist/assets/social
           shopt -s nullglob
@@ -27,6 +27,7 @@ jobs:
             name=$(basename "$f" .svg)
             rsvg-convert -w 1080 -h 1350 "$f" -o "dist/assets/social/$name.png"
           done
+          node tools/build-reels.mjs
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
