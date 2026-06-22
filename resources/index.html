@@ -10,76 +10,99 @@
 <meta name="theme-color" content="#0A0E1A">
 <link rel="stylesheet" href="/assets/styles.css">
 </head><body><header class="site-header"><div class="wrap">
-  <a class="brand" href="/"><img src="/assets/logo.svg" alt="Capital Decoded"></a>
-  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
-  <nav class="nav" id="nav"><a href="/">Home</a><a href="/articles/">Articles</a><a href="/resources/" class="active">Resources</a><a href="/contact/">Contact</a><a class="btn btn-primary" href="/#newsletter">Subscribe</a></nav>
+<a class="brand" href="/"><img src="/assets/logo.svg" alt="Capital Decoded"></a>
+<button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+<nav class="nav" id="nav"><a href="/">Home</a><a href="/articles/">Articles</a><a href="/resources/" class="active">Resources</a><a href="/contact/">Contact</a><a class="btn btn-primary" href="/#newsletter">Subscribe</a></nav>
 </div></header><section class="section"><div class="wrap">
-    <div class="section-head"><p class="eyebrow">Free Tools</p><h1 style="font-size:2.6rem">Resources</h1>
-    <p class="text-muted">Free guides and checklists to help you make clearer decisions. Pop in your email and we'll send the download straight over.</p></div>
-    <div class="resource-list"><div class="resource-card">
-    <span class="tag">Free Guide</span>
-    <h3>The Borrower's Pre-Approval Checklist</h3><p>Everything you need ready before you apply — so nothing slows you down.</p>
-    <form class="gate signup resource-form" data-file="/assets/guides/borrower-pre-approval-checklist.pdf" style="justify-content:flex-start">
-      <input type="email" name="email" placeholder="Your email" required>
-      <button class="btn btn-primary" type="submit">Get the guide</button>
-    </form>
-    <p class="form-msg" style="text-align:left;margin-top:10px"></p></div><div class="resource-card">
-    <span class="tag">Free Guide</span>
-    <h3>First-Time Investor's Risk Map</h3><p>The questions to ask on any deal, and the red flags that should give you pause.</p>
-    <form class="gate signup resource-form" data-file="/assets/guides/first-time-investor-risk-map.pdf" style="justify-content:flex-start">
-      <input type="email" name="email" placeholder="Your email" required>
-      <button class="btn btn-primary" type="submit">Get the guide</button>
-    </form>
-    <p class="form-msg" style="text-align:left;margin-top:10px"></p></div><div class="resource-card">
-    <span class="tag">Free Guide</span>
-    <h3>Reading a Market in 10 Minutes</h3><p>A simple framework for sizing up any local real estate market quickly.</p>
-    <form class="gate signup resource-form" data-file="/assets/guides/reading-a-market-in-10-minutes.pdf" style="justify-content:flex-start">
-      <input type="email" name="email" placeholder="Your email" required>
-      <button class="btn btn-primary" type="submit">Get the guide</button>
-    </form>
-    <p class="form-msg" style="text-align:left;margin-top:10px"></p></div></div>
-  </div></section>
-  <script>
-    document.querySelectorAll('.resource-form').forEach(function(f){
-      f.addEventListener('submit',function(e){e.preventDefault();
-        var file=f.getAttribute('data-file');
-        var msg=f.parentElement.querySelector('.form-msg');
-        if(msg){ msg.innerHTML = file ? "Thanks! <a href=""+file+"" download>Download your guide &rarr;</a>" : "You're on the list!"; }
-        f.reset();
-      });
-    });
-  </script><footer class="site-footer"><div class="wrap">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="/assets/logo.svg" alt="Capital Decoded">
-      <p>Clear, practical real estate insights anyone can use. No fluff, no sales pitch — just value.</p>
-      <div class="socials"><a href="https://instagram.com/capital.decodedhq" aria-label="instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a></div>
-    </div>
-    <div class="footer-links">
-      <div class="footer-col"><h4>Explore</h4>
-        <a href="/articles/">Articles</a><a href="/resources/">Resources</a></div>
-      <div class="footer-col"><h4>Topics</h4>
-        <a href="/articles/?category=borrower-guides">Borrower Guides</a>
-        <a href="/articles/?category=investor-insights">Investor Insights</a>
-        <a href="/articles/?category=market-updates">Market Updates</a></div>
-      <div class="footer-col"><h4>Connect</h4>
-        <a href="/contact/">Contact</a><a href="/#newsletter">Newsletter</a></div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 Capital Decoded. Educational content only — not financial, legal, or investment advice.</span>
-    <span>capitaldecoded.com</span>
-  </div>
+<div class="section-head"><p class="eyebrow">Free Tools</p><h1 style="font-size:2.6rem">Resources</h1>
+<p class="text-muted">Free guides and checklists to help you make clearer decisions. Pop in your email and we'll send the download straight over.</p></div>
+<div class="resource-list"><div class="resource-card">
+<span class="tag">Free Guide</span>
+<h3>The Borrower's Pre-Approval Checklist</h3><p>Everything you need ready before you apply — so nothing slows you down.</p>
+<form class="gate signup resource-form" data-file="/assets/guides/borrower-pre-approval-checklist.pdf" style="justify-content:flex-start">
+<input type="email" name="email" placeholder="Your email" required>
+<button class="btn btn-primary" type="submit">Get the guide</button>
+</form>
+<p class="form-msg" style="text-align:left;margin-top:10px"></p></div><div class="resource-card">
+<span class="tag">Free Guide</span>
+<h3>First-Time Investor's Risk Map</h3><p>The questions to ask on any deal, and the red flags that should give you pause.</p>
+<form class="gate signup resource-form" data-file="/assets/guides/first-time-investor-risk-map.pdf" style="justify-content:flex-start">
+<input type="email" name="email" placeholder="Your email" required>
+<button class="btn btn-primary" type="submit">Get the guide</button>
+</form>
+<p class="form-msg" style="text-align:left;margin-top:10px"></p></div><div class="resource-card">
+<span class="tag">Free Guide</span>
+<h3>Reading a Market in 10 Minutes</h3><p>A simple framework for sizing up any local real estate market quickly.</p>
+<form class="gate signup resource-form" data-file="/assets/guides/reading-a-market-in-10-minutes.pdf" style="justify-content:flex-start">
+<input type="email" name="email" placeholder="Your email" required>
+<button class="btn btn-primary" type="submit">Get the guide</button>
+</form>
+<p class="form-msg" style="text-align:left;margin-top:10px"></p></div></div>
+</div></section><footer class="site-footer"><div class="wrap">
+<div class="footer-grid">
+<div class="footer-brand">
+<img src="/assets/logo.svg" alt="Capital Decoded">
+<p>Clear, practical real estate insights anyone can use. No fluff, no sales pitch — just value.</p>
+<div class="socials"><a href="https://instagram.com/capital.decodedhq" aria-label="instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a></div>
+</div>
+<div class="footer-links">
+<div class="footer-col"><h4>Explore</h4>
+<a href="/articles/">Articles</a><a href="/resources/">Resources</a></div>
+<div class="footer-col"><h4>Topics</h4>
+<a href="/articles/?category=borrower-guides">Borrower Guides</a>
+<a href="/articles/?category=investor-insights">Investor Insights</a>
+<a href="/articles/?category=market-updates">Market Updates</a></div>
+<div class="footer-col"><h4>Connect</h4>
+<a href="/contact/">Contact</a><a href="/#newsletter">Newsletter</a></div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>&copy; 2026 Capital Decoded. Educational content only — not financial, legal, or investment advice.</span>
+<span>capitaldecoded.com</span>
+</div>
 </div></footer>
 <script>
-  // newsletter + contact: graceful no-backend handling
-  document.querySelectorAll('form[data-capture]').forEach(function(f){
-    f.addEventListener('submit',function(e){
-      if(!f.getAttribute('action')){ e.preventDefault();
-        var m=f.querySelector('.form-msg'); if(m){m.textContent="You're on the list. Thanks for subscribing!";}
-        f.reset();
-      }
-    });
-  });
+// Capital Decoded — form handling: newsletter + resources -> HubSpot; contact -> email
+(function(){
+var HS_PORTAL="246507952", HS_FORM="2487b0df-72e4-4ec5-bc95-0c3213beb9df", BRAND_EMAIL="capitaldecoded235@gmail.com";
+function hsSubmit(email){
+return fetch("https://api.hsforms.com/submissions/v3/integration/submit/"+HS_PORTAL+"/"+HS_FORM,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({fields:[{name:"email",value:email}],context:{pageUri:location.href,pageName:document.title}})});
+}
+function findMsg(f){ return f.parentElement.querySelector(".form-msg") || f.querySelector(".form-msg"); }
+// Resource "get the guide" forms -> capture to HubSpot, then reveal the guide
+document.querySelectorAll("form.resource-form").forEach(function(f){
+f.addEventListener("submit",function(e){e.preventDefault();
+var inp=f.querySelector("input[type=email]"); var email=inp?inp.value.trim():"";
+var file=f.getAttribute("data-file"); var m=findMsg(f);
+if(!email){ if(m) m.textContent="Please enter your email."; return; }
+if(m) m.textContent="Sending your guide…";
+var done=function(){ if(m){ m.innerHTML = file ? ("✓ Check your email — or <a href=""+file+"" download>download it now &rarr;</a>") : "✓ You're on the list! Your guide is on the way."; } };
+hsSubmit(email).then(done,done); f.reset();
+});
+});
+// Newsletter / generic capture forms (not contact, not resource)
+document.querySelectorAll("form[data-capture]:not(.contact-form)").forEach(function(f){
+f.addEventListener("submit",function(e){e.preventDefault();
+var inp=f.querySelector("input[type=email]"); var email=inp?inp.value.trim():"";
+var m=findMsg(f);
+if(!email){ if(m) m.textContent="Please enter your email."; return; }
+if(m) m.textContent="Subscribing…";
+hsSubmit(email).then(function(r){ if(m) m.textContent=(r&&(r.ok||r.status===200))?"✓ You're subscribed! Check your inbox for a welcome email.":"Hmm, that didn't go through — please try again."; },function(){ if(m) m.textContent="✓ You're subscribed! Check your inbox shortly."; });
+f.reset();
+});
+});
+// Contact form -> also capture email, then open mail app
+document.querySelectorAll("form.contact-form").forEach(function(f){
+f.addEventListener("submit",function(e){e.preventDefault();
+var nm=(f.querySelector("input[name=name]")||{}).value||"";
+var em=(f.querySelector("input[name=email]")||{}).value||"";
+var tx=(f.querySelector("textarea")||{}).value||"";
+var m=f.querySelector(".form-msg");
+if(em) hsSubmit(em).catch(function(){});
+window.location.href="mailto:"+BRAND_EMAIL+"?subject="+encodeURIComponent("Capital Decoded inquiry from "+nm)+"&body="+encodeURIComponent(tx+"  —  "+nm+" ("+em+")");
+if(m) m.textContent="Opening your email app to send…";
+});
+});
+})();
 </script>
 </body></html>
