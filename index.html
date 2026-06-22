@@ -104,7 +104,7 @@ var inp=f.querySelector("input[type=email]"); var email=inp?inp.value.trim():"";
 var file=f.getAttribute("data-file"); var m=findMsg(f);
 if(!email){ if(m) m.textContent="Please enter your email."; return; }
 if(m) m.textContent="Sending your guide…";
-var done=function(){ if(m){ m.innerHTML = file ? ("✓ Check your email — or <a href=""+file+"" download>download it now &rarr;</a>") : "✓ You're on the list! Your guide is on the way."; } };
+var done=function(){ if(m){ m.innerHTML = file ? ("✓ Saved! <a href='"+file+"' download>Download your guide &rarr;</a>") : "✓ You're on the list! Your guide is on the way."; } };
 hsSubmit(email).then(done,done); f.reset();
 });
 });
