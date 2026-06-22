@@ -97,14 +97,14 @@ function hsSubmit(email){
 return fetch("https://api.hsforms.com/submissions/v3/integration/submit/"+HS_PORTAL+"/"+HS_FORM,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({fields:[{name:"email",value:email}],context:{pageUri:location.href,pageName:document.title}})});
 }
 function findMsg(f){ return f.parentElement.querySelector(".form-msg") || f.querySelector(".form-msg"); }
-// Resource "get the guide" forms -> capture to HubSpot, then reveal the guide
+// Resource "get the guide" forms -> capture to HubSpot, confirm, then auto-download the guide
 document.querySelectorAll("form.resource-form").forEach(function(f){
 f.addEventListener("submit",function(e){e.preventDefault();
 var inp=f.querySelector("input[type=email]"); var email=inp?inp.value.trim():"";
 var file=f.getAttribute("data-file"); var m=findMsg(f);
 if(!email){ if(m) m.textContent="Please enter your email."; return; }
 if(m) m.textContent="Sending your guide…";
-var done=function(){ if(m){ m.innerHTML = file ? ("✓ Saved! <a href='"+file+"' download>Download your guide &rarr;</a>") : "✓ You're on the list! Your guide is on the way."; } };
+var done=function(){ if(m){ m.innerHTML = file ? ("✓ You're signed up! Your guide is downloading now — <a href='"+file+"' download>click here</a> if it doesn't start automatically.") : "✓ You're signed up! Thanks for joining Capital Decoded."; } if(file){ try{ var a=document.createElement('a'); a.href=file; a.setAttribute('download',''); document.body.appendChild(a); a.click(); a.remove(); }catch(err){} } };
 hsSubmit(email).then(done,done); f.reset();
 });
 });
@@ -115,7 +115,7 @@ var inp=f.querySelector("input[type=email]"); var email=inp?inp.value.trim():"";
 var m=findMsg(f);
 if(!email){ if(m) m.textContent="Please enter your email."; return; }
 if(m) m.textContent="Subscribing…";
-hsSubmit(email).then(function(r){ if(m) m.textContent=(r&&(r.ok||r.status===200))?"✓ You're subscribed! Check your inbox for a welcome email.":"Hmm, that didn't go through — please try again."; },function(){ if(m) m.textContent="✓ You're subscribed! Check your inbox shortly."; });
+hsSubmit(email).then(function(r){ if(m) m.textContent=(r&&(r.ok||r.status===200))?"✓ You're subscribed! Thanks for joining — new insights are on the way.":"Hmm, that didn't go through — please try again."; },function(){ if(m) m.textContent="✓ You're subscribed! Thanks for joining."; });
 f.reset();
 });
 });
